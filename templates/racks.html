@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Racks</title>
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5f7fa, #e8f0fe, #e0fff9);
+        }
+        .card {
+            border-radius: 12px;
+        }
+        .table td, .table th {
+            vertical-align: middle;
+        }
+        .btn-edit {
+            background-color: #4e73df;
+            color: white;
+        }
+        .btn-edit:hover {
+            background-color: #3c5cc7;
+        }
+        .btn-delete {
+            background-color: #e63946;
+            color: white;
+        }
+        .btn-delete:hover {
+            background-color: #c72e3b;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container mt-5">
+
+    <h2 class="mb-4 text-center fw-bold">
+        <i class="fa-solid fa-server me-2"></i>Racks
+    </h2>
+
+    <!-- Add Rack -->
+    <div class="card p-4 mb-5 shadow">
+        <h4 class="mb-3 text-primary">
+            <i class="fa-solid fa-plus-circle me-2"></i>Add Rack
+        </h4>
+
+        <form id="add-rack-form">
+    <label class="form-label fw-semibold">Rack Name:</label>
+    <input type="text" class="form-control mb-3" id="rack-name" placeholder="Ex: Rack-A01" required>
+
+    <label class="form-label fw-semibold">Capacity (Servers):</label>
+    <input type="number" class="form-control mb-3" id="rack-capacity" placeholder="Ex: 20" required>
+
+    <label class="form-label fw-semibold">Choose Datacenter:</label>
+    <select class="form-select" id="datacenter-id" required>
+        {% for dc in datacenters %}
+            <option value="{{ dc[0] }}">{{ dc[1] }} ({{ dc[2] }})</option>
+        {% endfor %}
+    </select>
+
+    <button class="btn btn-success mt-3 px-4" type="submit">
+        <i class="fa-solid fa-check me-1"></i>Add
+    </button>
+</form>
+
+    </div>
+
+    <!-- Racks Table -->
+    <div class="card shadow-sm p-3">
+        <table class="table table-bordered table-hover">
+            <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Rack Name</th>
+                <th>Capacity</th>
+                <th>Datacenter</th>
+                <th class="text-center">Actions</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            {% for r in data %}
+            <tr>
+                <td>{{ r[0] }}</td>
+                <td>{{ r[1] }}</td>
+                <td>{{ r[2] }}</td>
+                <td>{{ r[3] }}</td>
+
+                <td class="text-center">
+                    <!-- DELETE -->
+                    <a href="/racks/delete/{{ r[0] }}"
+                       class="btn btn-delete btn-sm"
+                       onclick="return confirm('Are you sure you want to delete this Rack?');">
+                        <i class="fa-solid fa-trash"></i> Delete
+                    </a>
+
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="text-center mt-4">
+        <a class="btn btn-secondary px-4" href="/">
+            <i class="fa-solid fa-arrow-left me-2"></i>Back to Home
+        </a>
+    </div>
+
+</div>
+
+</body>
+<script>
+document.getElementById('add-rack-form').addEventListener('submit', async function(e){
+    e.preventDefault();
+    const rack_name = document.getElementById('rack-name').value;
+    const capacity = document.getElementById('rack-capacity').value;
+    const datacenter_id = document.getElementById('datacenter-id').value;
+
+    const res = await fetch('/api/add_rack', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ rack_name, capacity, datacenter_id })
+    });
+
+    const data = await res.json();
+    if(data.status === "success"){
+        // Add row dynamically
+        const tbody = document.querySelector('table tbody');
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${data.id}</td>
+            <td>${data.rack_name}</td>
+            <td>${data.capacity}</td>
+            <td>${document.getElementById('datacenter-id').selectedOptions[0].text}</td>
+            <td class="text-center">
+                <a href="/racks/delete/${data.id}" class="btn btn-delete btn-sm" onclick="return confirm('Are you sure?');">
+                    <i class="fa-solid fa-trash"></i> Delete
+                </a>
+            </td>
+        `;
+        tbody.appendChild(row);
+
+        // Clear form
+        document.getElementById('rack-name').value = '';
+        document.getElementById('rack-capacity').value = '';
+    }
+});
+</script>
+
+</html>

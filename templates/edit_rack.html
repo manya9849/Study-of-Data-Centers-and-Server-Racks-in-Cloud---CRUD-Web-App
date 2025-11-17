@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Rack</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-light">
+<div class="container mt-5">
+    <h2 class="mb-4 text-center text-success"><i class="fa-solid fa-server me-2"></i>Edit Rack</h2>
+
+    <div class="card p-4 shadow-sm border-success">
+        <form action="/racks/edit/{{ rack[0] }}" method="POST">
+            <label class="form-label fw-semibold">Rack Name:</label>
+            <input type="text" class="form-control mb-3" name="rack_name" value="{{ rack[1] }}" required>
+
+            <label class="form-label fw-semibold">Capacity:</label>
+            <input type="number" class="form-control mb-3" name="capacity" value="{{ rack[2] }}" required>
+
+            <label class="form-label fw-semibold">Select Datacenter:</label>
+            <select class="form-select mb-3" name="datacenter_id" required>
+                {% for dc in datacenters %}
+                    <option value="{{ dc[0] }}" {% if dc[0] == rack[3] %}selected{% endif %}>{{ dc[1] }}</option>
+                {% endfor %}
+            </select>
+
+            <button class="btn btn-success mt-3 px-4" type="submit">
+                <i class="fa-solid fa-pen-to-square me-1"></i>Update Rack
+            </button>
+        </form>
+    </div>
+
+    <a class="btn btn-secondary mt-3" href="/racks"><i class="fa-solid fa-arrow-left me-1"></i>Back</a>
+</div>
+</body>
+</html>

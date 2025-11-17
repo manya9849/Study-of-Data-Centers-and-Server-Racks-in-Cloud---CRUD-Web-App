@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Server</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-light">
+<div class="container mt-5">
+    <h2 class="mb-4 text-center text-warning"><i class="fa-solid fa-computer me-2"></i>Edit Server</h2>
+
+    <div class="card p-4 shadow-sm border-warning">
+        <form action="/servers/edit/{{ server[0] }}" method="POST">
+            <label class="form-label fw-semibold">Server Name:</label>
+            <input type="text" class="form-control mb-3" name="server_name" value="{{ server[1] }}" required>
+
+            <label class="form-label fw-semibold">Select Rack:</label>
+            <select class="form-select mb-3" name="rack_id" required>
+                {% for rack in racks %}
+                    <option value="{{ rack[0] }}" {% if rack[0] == server[6] %}selected{% endif %}>{{ rack[1] }}</option>
+                {% endfor %}
+            </select>
+
+            <label class="form-label fw-semibold">CPU Usage (%):</label>
+            <input type="number" class="form-control mb-3" name="cpu_usage" value="{{ server[2] }}" min="0" max="100" required>
+
+            <label class="form-label fw-semibold">Temperature (°C):</label>
+            <input type="number" class="form-control mb-3" name="temperature" value="{{ server[3] }}" min="0" max="150" required>
+
+            <label class="form-label fw-semibold">Status:</label>
+            <select class="form-select mb-3" name="status" required>
+                <option value="Normal" {% if server[4]=='Normal' %}selected{% endif %}>Normal</option>
+                <option value="Overheating" {% if server[4]=='Overheating' %}selected{% endif %}>Overheating</option>
+                <option value="Maintenance" {% if server[4]=='Maintenance' %}selected{% endif %}>Maintenance</option>
+            </select>
+
+            <button class="btn btn-warning mt-3 px-4" type="submit">
+                <i class="fa-solid fa-pen-to-square me-1"></i>Update Server
+            </button>
+        </form>
+    </div>
+
+    <a class="btn btn-secondary mt-3" href="/servers"><i class="fa-solid fa-arrow-left me-1"></i>Back</a>
+</div>
+</body>
+</html>
