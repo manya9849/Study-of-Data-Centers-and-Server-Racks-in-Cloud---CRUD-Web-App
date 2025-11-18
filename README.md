@@ -118,9 +118,13 @@ Tested across multiple cases with consistent results
 Test Cases Performed:
 
 Add Data Inserted new data center entry	-Passed
+
 Read Data	Displayed entries from Firestore-	Passed
+
 Update Data	Modified existing entry-Passed
+
 Delete Data	Removed entry successfully-	Passed
+
 Invalid Input	Ensured validation messages-Passed
 
 
