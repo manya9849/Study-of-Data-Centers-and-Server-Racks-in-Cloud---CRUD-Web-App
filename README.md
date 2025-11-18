@@ -95,7 +95,27 @@ function addDataCenter() {
 }
 
 
-4.4 Screenshots
+4.4  Installation & Setup
+
+1. Clone the repository
+
+git clone https://github.com/<your-username>/<repo-name>.git
+
+2. Install dependencies
+
+pip install -r requirements.txt
+
+3. Run the app
+
+python app.py
+
+4. Open in browser
+
+http://localhost:5000/
+
+
+
+4.5 Screenshots
 
 <img width="1783" height="919" alt="Screenshot 2025-11-17 162333" src="https://github.com/user-attachments/assets/5302a792-11cc-4c7e-9971-77a4689d2354" />
 <img width="1618" height="953" alt="Screenshot 2025-11-17 162636" src="https://github.com/user-attachments/assets/1f5d1eec-cef4-43ee-af98-b67cfbe691d4" />
