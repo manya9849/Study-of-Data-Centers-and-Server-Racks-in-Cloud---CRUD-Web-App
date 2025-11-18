@@ -1,4 +1,4 @@
-☁ Study of Data Centers and Server Racks in Cloud – Mini Project Report 
+☁ Study of Data Centers and Server Racks in Cloud – Mini Project
 
 
 
@@ -25,6 +25,7 @@ To test the system thoroughly and document challenges, errors, and solutions.
 
 3. Background / Theory
 
+
 3.1 Data Centers
 
 A data center is a facility that houses computer systems and associated components such as networking devices, servers, cooling units, and storage systems. Cloud providers like AWS, Google Cloud, and Microsoft Azure operate vast global data centers offering scalable computing services.
@@ -36,11 +37,13 @@ Redundancy: Multiple backup systems to ensure high availability.
 Security: Physical and digital protections.
 Virtualization: Efficient resource distribution.
 
+
 3.2 Server Racks
 
 Server racks are standardized frames designed to hold and organize multiple servers. They optimize space, simplify maintenance, and support effective cooling.
 
-3.3 Firebase Cloud Firestore (Used in Project)
+
+3.3 Firebase Cloud Firestore
 
 Firebase is a Backend-as-a-Service (BaaS) platform by Google. Firestore is its NoSQL cloud database offering real-time syncing, easy integration, and scalability.
 
@@ -73,29 +76,8 @@ VS Code – development environment
 5. Real-time reflection of changes on the screen.
 
 
-4.3 Code Snippets (Add your actual code later)
 
-// Example Firebase initialization
-const firebaseConfig = {
-    apiKey: "YOUR_KEY",
-    authDomain: "YOUR_DOMAIN",
-    projectId: "PROJECT_ID",
-};
-
-firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
-
-// Add Data Center Entry
-function addDataCenter() {
-    db.collection("dataCenters").add({
-        name: nameInput.value,
-        location: locInput.value,
-        racks: rackInput.value,
-    });
-}
-
-
-4.4  Installation & Setup
+4.3 Installation & Setup
 
 1. Clone the repository
 
@@ -115,7 +97,7 @@ http://localhost:5000/
 
 
 
-4.5 Screenshots
+4.4 Screenshots
 
 <img width="1783" height="919" alt="Screenshot 2025-11-17 162333" src="https://github.com/user-attachments/assets/5302a792-11cc-4c7e-9971-77a4689d2354" />
 <img width="1618" height="953" alt="Screenshot 2025-11-17 162636" src="https://github.com/user-attachments/assets/1f5d1eec-cef4-43ee-af98-b67cfbe691d4" />
