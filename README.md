@@ -29,18 +29,8 @@ Test the system and document challenges
 
 
 
-3. Background / Theory
 
-3.1. Data Centers
-
-Facilities that contain servers, network hardware, cooling, and security systems.
-Key traits: Scalable, redundant, secure, virtualized.
-
-3.2. Server Racks
-
-Standardized frames organizing multiple servers for better space usage, maintenance, and cooling.
-
-3.3. Firebase Cloud Firestore
+3. Firebase Cloud Firestore
 
 Google’s NoSQL database with real-time sync, secure storage, and simple CRUD integration.
 
@@ -127,72 +117,20 @@ Tested across multiple cases with consistent results
 
 Test Cases Performed:
 
-Add Data Inserted new data center entry	Passed
-Read Data	Displayed entries from Firestore	Passed
-Update Data	Modified existing entry	Passed
-Delete Data	Removed entry successfully	Passed
-Invalid Input	Ensured validation messages	Passed
-
-
-Observed Errors & Fixes:
-
-
-Firebase not initializing → corrected API keys
-
-Real-time updates missing → fixed using onSnapshot()
-
-CORS issues → resolved via Firebase hosting configs
+Add Data Inserted new data center entry	-Passed
+Read Data	Displayed entries from Firestore-	Passed
+Update Data	Modified existing entry-Passed
+Delete Data	Removed entry successfully-	Passed
+Invalid Input	Ensured validation messages-Passed
 
 
 
 
-7. Discussion
-
-The project demonstrated how cloud databases simplify storage and management tasks. Using Firebase enhanced understanding of NoSQL structures and real-time data synchronization. The system provides a minimal yet functional model representing how companies manage data center inventories.
 
 
 
 
-8. Challenges and Reflection
-
-Challenges Faced:
-
-
-First-time Firebase integration
-
-Deployment errors from wrong file paths
-
-Maintaining UI while adding validation
-
-
-Fixes
-
-Used Firebase docs + console debugging
-
-Tested functions individually
-
-Frequent Git commits for safe revert
-
-
-Learning Outcomes
-
-Stronger cloud + NoSQL understanding
-
-Improved debugging and logic structuring
-
-Practical experience with real-time databases
-
-
-
-9. Conclusion
-
-
-The project met all goals: studying cloud data centers and building a cloud-backed CRUD system. Firebase integration proved effective, and the final app demonstrates how data center info can be managed efficiently.
-
-
-
-
-10. References
+7. References
 
 Firebase Documentation – https://firebase.google.com/docs
 Google Cloud Data Center Overview
