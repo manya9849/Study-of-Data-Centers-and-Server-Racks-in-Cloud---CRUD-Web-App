@@ -46,15 +46,6 @@ Windows PowerShell
 5. Users can edit or delete entries — updates reflect in real time.
 
 
-📸 Screenshots
-
-<img width="1783" height="919" alt="Screenshot 2025-11-17 162333" <img width="1618" height="953" alt="Screenshot 2025-11-17 162636" src="https://github.com/user-attachments/assets/1984279c-0546-4757-acb9-a56f55defcfe" />
-src="https://github.com/user-attachments/assets/ba688d18-7830-43d6-93df-383190540263" />
-<img width="992" height="795" alt="Screenshot 2025-11-17 162728"<img width="1920" height="1020" alt="Screenshot 2025-11-17 163030" src="https://github.com/user-attachments/assets/db4bfbf5-bb21-4a70-9914-62dfb1a10b79" />
- src="https://github.com/user-attachments/assets/b3ba0649-84a9-4e52-a353-571d108b7685" />
-<img width="1920" height="1020" alt="Screenshot 2025-11-18 143023" src="https://github.com/user-attachments/assets/cf67f7b7-33ce-4237-8655-ce111aac9931" />
-
-
 📝 Installation & Setup
 
 1. Clone the repository
@@ -79,3 +70,12 @@ Future Improvements
 Add user authentication for secure access.
 Implement search and filtering features.
 Improve UI/UX with frameworks like Bootstrap or React.
+
+
+📸 Screenshots
+
+<img width="1783" height="919" alt="Screenshot 2025-11-17 162333" src="https://github.com/user-attachments/assets/38636b88-20da-45b4-a290-c4ef96870fc0" />
+<img width="1618" height="953" alt="Screenshot 2025-11-17 162636" src="https://github.com/user-attachments/assets/c1560715-84cb-4029-b25c-971c020966cd" />
+<img width="1693" height="909" alt="Screenshot 2025-11-17 162742" src="https://github.com/user-attachments/assets/315a0988-a2ae-42a3-b0c6-4206f9e2ae9b" />
+<img width="1920" height="1020" alt="Screenshot 2025-11-17 163030" src="https://github.com/user-attachments/assets/5a281067-a9e3-4174-a27c-0a46c50eafe8" />
+<img width="1920" height="1020" alt="Screenshot 2025-11-18 143023" src="https://github.com/user-attachments/assets/610d2736-4130-4188-9dba-4d32bc5cfd0b" />
