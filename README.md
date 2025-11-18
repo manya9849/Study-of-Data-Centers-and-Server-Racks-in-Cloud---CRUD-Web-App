@@ -1,9 +1,13 @@
 ☁ Study of Data Centers and Server Racks in Cloud – Mini Project Report 
 
 
+
+
 1. Introduction
 
 Cloud computing has transformed how enterprises manage, store, and process data. At the core of cloud infrastructure lie data centers—large-scale facilities containing thousands of interconnected servers, network devices, and storage systems. This mini project focuses on understanding the structure and functioning of data centers and server racks, along with building a simple web-based system where users can create, read, update, and delete (CRUD) data center information using Firebase as the backend.
+
+
 
 
 2. Objectives
@@ -15,6 +19,8 @@ To build a functional webpage that allows users to manage data center records.
 To implement CRUD operations using Firebase Cloud Firestore.
 To deploy or host the project and maintain version control using Git and GitHub.
 To test the system thoroughly and document challenges, errors, and solutions.
+
+
 
 
 3. Background / Theory
@@ -45,6 +51,8 @@ Simple setup and integration
 Real-time data updates
 Secure cloud storage
 Easy CRUD operations
+
+
 
 
 4. Implementation
@@ -96,6 +104,8 @@ function addDataCenter() {
 <img width="1920" height="1020" alt="Screenshot 2025-11-18 143023" src="https://github.com/user-attachments/assets/a6e3de60-c077-4c45-a5e5-d77ca6603785" />
 
 
+
+
 5. Results
 
 Successfully created a webpage that stores and displays data center information.
@@ -103,6 +113,8 @@ Implemented Add, Read, Update, Delete operations using Firebase.
 Achieved seamless real-time syncing between UI and Firestore.
 Ensured proper input validation and error handling.
 Verified functionality through multiple test cases.
+
+
 
 
 6. Testing & Evaluation
@@ -123,9 +135,13 @@ Real-time listener not updating UI: Fixed by using onSnapshot() correctly.
 CORS issues: Solved by configuring Firebase hosting settings.
 
 
+
+
 7. Discussion
 
 The project demonstrated how cloud databases simplify storage and management tasks. Using Firebase enhanced understanding of NoSQL structures and real-time data synchronization. The system provides a minimal yet functional model representing how companies manage data center inventories.
+
+
 
 
 8. Challenges and Reflection
@@ -150,9 +166,13 @@ Improved debugging and problem‑solving skills.
 Hands-on experience with version control and real-time databases.
 
 
+
+
 9. Conclusion
 
 This mini project successfully achieved its goals of analyzing cloud data centers and implementing a cloud-backed CRUD application. The integration of Firebase showcased practical cloud storage usage, and the final system offers a clear demonstration of managing data center information through a web-based interface.
+
+
 
 
 10. References
