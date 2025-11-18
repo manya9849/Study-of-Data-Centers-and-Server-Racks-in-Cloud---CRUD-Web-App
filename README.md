@@ -72,6 +72,7 @@ Challenges & Learning
 Integrating Firebase with Flask.
 Handling CRUD operations securely.
 Managing sensitive data like API keys.
+<img width="1783" height="919" alt="Screenshot 2025-11-17 162333" src="https://github.com/user-attachments/assets/42cb1875-4b60-4c1a-b141-056697d002e8" />
 
 Future Improvements
 
