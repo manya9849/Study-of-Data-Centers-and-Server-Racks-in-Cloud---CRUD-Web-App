@@ -137,20 +137,22 @@ Invalid Input	Ensured validation messages-Passed
 ## 8. References
 
 Firebase Documentation – https://firebase.google.com/docs
+
 Google Cloud Data Center Overview
+
 AWS Infrastructure Whitepapers
 
 ## 🙌 Author
 
-Manya Muthamma
+KM Manya Muthamma
 
-Computer Networks Mini Project
+Cloud Computing Mini Project
 
-Network Access & Utility Suite (2025)
-
-
+Data Centers and Server Racks in Cloud (2025)
 
 
-Author - KM MANYA MUTHAMMA 
+
+
+
 
 
