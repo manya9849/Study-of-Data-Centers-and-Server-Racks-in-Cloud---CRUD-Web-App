@@ -1,9 +1,9 @@
-☁ Study of Data Centers and Server Racks in Cloud – Mini Project
+## ☁ Study of Data Centers and Server Racks in Cloud – Mini Project
 
 
 
 
-1. Introduction
+## 1. Introduction
 
 
 Cloud computing runs on massive data centers packed with servers, racks, and networking systems. This project focuses on understanding how these facilities operate while building a simple web app that manages data-center data using Firebase.
@@ -11,7 +11,7 @@ Cloud computing runs on massive data centers packed with servers, racks, and net
 
 
 
-2. Objectives
+## 2. Objectives
 
 Understand architecture & components of cloud data centers
 
@@ -30,7 +30,7 @@ Test the system and document challenges
 
 
 
-3. Firebase Cloud Firestore
+## 3. Firebase Cloud Firestore
 
 Google’s NoSQL database with real-time sync, secure storage, and simple CRUD integration.
 
@@ -48,7 +48,7 @@ Smooth CRUD functionality
 
 
 
-4. Implementation
+## 4. Implementation
 
 4.1 Tools and Technologies Used
 HTML, CSS, JavaScript – for webpage UI and logic
@@ -87,7 +87,7 @@ http://localhost:5000/
 
 
 
-4.4 Screenshots
+## 5. Screenshots
 
 <img width="1783" height="919" alt="Screenshot 2025-11-17 162333" src="https://github.com/user-attachments/assets/5302a792-11cc-4c7e-9971-77a4689d2354" />
 <img width="1618" height="953" alt="Screenshot 2025-11-17 162636" src="https://github.com/user-attachments/assets/1f5d1eec-cef4-43ee-af98-b67cfbe691d4" />
@@ -98,7 +98,7 @@ http://localhost:5000/
 
 
 
-5. Results
+## 6. Results
 
 
 Functional webpage for storing & displaying data-center info
@@ -113,7 +113,7 @@ Tested across multiple cases with consistent results
 
 
 
-6. Testing & Evaluation
+## 7. Testing & Evaluation
 
 Test Cases Performed:
 
@@ -134,12 +134,19 @@ Invalid Input	Ensured validation messages-Passed
 
 
 
-7. References
+## 8. References
 
 Firebase Documentation – https://firebase.google.com/docs
 Google Cloud Data Center Overview
 AWS Infrastructure Whitepapers
 
+## 🙌 Author
+
+Manya Muthamma
+
+Computer Networks Mini Project
+
+Network Access & Utility Suite (2025)
 
 
 
